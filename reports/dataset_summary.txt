@@ -1,0 +1,29 @@
+Dataset Name: UNSW-NB15 (partitioned training/testing sets)
+Train records: 175341
+Test records: 82332
+Number of columns: 45
+Target columns: label (binary), attack_cat (multi-class)
+Number of attack categories: 10
+Categorical features: ['proto', 'service', 'state', 'attack_cat']
+Numerical feature count: 41
+Missing values: 0
+Duplicate records (excluding id): 67601
+Infinite values: 0
+
+Binary label counts:
+label
+1    119341
+0     56000
+
+Attack category counts:
+attack_cat
+Normal            56000
+Generic           40000
+Exploits          33393
+Fuzzers           18184
+DoS               12264
+Reconnaissance    10491
+Analysis           2000
+Backdoor           1746
+Shellcode          1133
+Worms               130
