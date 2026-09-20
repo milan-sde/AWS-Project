@@ -20,7 +20,8 @@ if __name__ == "__main__":
     p.add_argument("--train_dir", default=os.environ.get("SM_CHANNEL_TRAIN", "data/processed"))
     p.add_argument("--test_dir", default=os.environ.get("SM_CHANNEL_TEST", "data/processed"))
     p.add_argument("--model_dir", default=os.environ.get("SM_MODEL_DIR", "models/local_out"))
-    args = p.parse_args()
+    # args = p.parse_args()
+    args, _ = p.parse_known_args()
 
     os.makedirs(args.model_dir, exist_ok=True)
 
