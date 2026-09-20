@@ -30,7 +30,7 @@ X_te, y_te = te.drop(columns="label").astype(float), te["label"]
 models = {
     "Decision Tree": DecisionTreeClassifier(max_depth=12, random_state=42),
     "Random Forest": RandomForestClassifier(n_estimators=100, n_jobs=-1, random_state=42),
-    "XGBoost": XGBClassifier(n_estimators=200, max_depth=6, eval_metric="logloss", random_state=42),
+    "XGBoost": XGBClassifier(n_estimators=200, max_depth=6, learning_rate=0.1, eval_metric="logloss", random_state=42),
 }
 
 rows = []
